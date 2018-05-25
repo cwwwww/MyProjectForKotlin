@@ -62,11 +62,11 @@ class HomeFragment : BaseFragment(tabId = tabsId[0]), HomeContract.IView {
         })
 
         rv_home.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
+                    override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
+                        super.onScrollStateChanged(recyclerView, newState)
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                     val childCount = rv_home.childCount
-                    val itemCount = rv_home.layoutManager.childCount
+                    val itemCount = rv_home.layoutManager.itemCount
                     val firstVisibleItem = (rv_home.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
                     if (firstVisibleItem + childCount == itemCount) {
                         Log.d(TAG, "到底了")

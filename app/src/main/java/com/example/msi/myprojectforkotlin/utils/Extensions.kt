@@ -19,6 +19,7 @@ fun <T> Observable<T>.io_main(): Observable<T> {
     return subscribeOn(Schedulers.io())
             .unsubscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
+
 }
 
 fun durationFormat(duration: Long?): String {

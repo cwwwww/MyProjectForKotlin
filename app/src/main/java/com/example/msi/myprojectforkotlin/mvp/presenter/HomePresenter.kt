@@ -1,6 +1,5 @@
 package com.example.msi.myprojectforkotlin.mvp.presenter
 
-import com.example.msi.myprojectforkotlin.base.BasePresenter
 import com.example.msi.myprojectforkotlin.bean.HomeBean
 import com.example.msi.myprojectforkotlin.mvp.contract.HomeContract
 import com.example.msi.myprojectforkotlin.mvp.model.HomeModel
@@ -37,6 +36,7 @@ class HomePresenter(view: HomeContract.IView) : HomeContract.IPresenter {
                     error.printStackTrace()
                     homeView.onError()
                 })
+
     }
 
     override fun requestMoreData() {

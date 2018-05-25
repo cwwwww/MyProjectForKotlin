@@ -33,7 +33,7 @@ object DisplayManager {
     private val STANDARD_HEIGHT = 1920
 
 
-    fun getScreenWidth(): Int? {
+    private fun getScreenWidth(): Int? {
         return screenWidth
     }
 
