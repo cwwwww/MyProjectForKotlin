@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion rootProject.androidCompileSdkVersion
+    defaultConfig {
+        applicationId "com.example.msi.myprojectforkotlin"
+        minSdkVersion rootProject.androidMinSdkVersion
+        targetSdkVersion rootProject.androidTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    Map<String, String> dep = rootProject.ext.dependencies
+    implementation dep.android_appcompat
+    compile dep.android_design
+    compile dep.android_cardView
+    compile dep.android_recyclerView
+    compile dep.retrofit_gson
+    compile dep.retrofit_adapter
+    compile dep.okhttp3
+    compile dep.rxjava_rxjava2
+    compile dep.rxjava_rxandroid
+    compile dep.retrofit_retrofit2
+    compile dep.glide
+    compile dep.video_player
+    compile dep.cockroach
+}

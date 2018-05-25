@@ -1,0 +1,23 @@
+ext{
+   androidCompileSdkVersion = 26
+    androidBuildToolsVersion = '26.0.1'
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 26
+    version_apCompat = '26.0.1'
+
+    dependencies = [
+            android_design                 : "com.android.support:design:$version_apCompat",
+            android_appcompat              : "com.android.support:appcompat-v7:$version_apCompat",
+            android_cardView               : "com.android.support:cardview-v7:$version_apCompat",
+            android_recyclerView           : "com.android.support:recyclerview-v7:$version_apCompat",
+            retrofit_gson                  :'com.squareup.retrofit2:converter-gson:2.0.1',
+            retrofit_adapter               :'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            okhttp3                        : 'com.squareup.okhttp3:okhttp:3.1.2',
+            rxjava_rxjava2                 :'io.reactivex.rxjava2:rxjava:2.1.0',
+            rxjava_rxandroid               : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            retrofit_retrofit2             : 'com.squareup.retrofit2:retrofit:2.3.0',
+            glide                          :'com.github.bumptech.glide:glide:3.6.1',
+            video_player                   :'com.shuyu:GSYVideoPlayer:2.0.4',
+            cockroach                      : 'com.wanjian:cockroach:0.0.5'
+    ]
+}
