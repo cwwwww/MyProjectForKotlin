@@ -55,7 +55,7 @@ class HomeBanner : FrameLayout {
 
                 setTitleSlogan(position)
 
-                for (i in 0..indicators.childCount - 1) {
+                for (i in 0 until indicators.childCount) {
                     if (i == position) {
                         (indicators.getChildAt(i) as Indicator).setState(true)
                     } else {
@@ -128,9 +128,9 @@ class HomeBanner : FrameLayout {
     }
 
 
-    fun setIndicators(bannerDatas: ArrayList<Item>) {
+    fun setIndicators(bannerData: ArrayList<Item>) {
         indicators.removeAllViews()
-        bannerDatas.forEach { _ ->
+        bannerData.forEach { _ ->
             val indicator = Indicator(context)
             val layoutParams = LinearLayout.LayoutParams(DisplayManager.getRealHeight(20)!!, DisplayManager.getRealHeight(20)!!)
             layoutParams.leftMargin = DisplayManager.getRealWidth(10)!!

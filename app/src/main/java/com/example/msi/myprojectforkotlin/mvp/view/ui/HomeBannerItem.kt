@@ -41,7 +41,7 @@ class HomeBannerItem : FrameLayout {
         val feedImgUrl = data.data?.cover?.feed
         Glide.with(context).load(feedImgUrl).centerCrop().into(imageView)
 
-        if (thumbPlayUrl == null || "".equals(thumbPlayUrl)) {
+        if (thumbPlayUrl == null || "" == thumbPlayUrl) {
             isVideo = false
             videoView.visibility = View.GONE
         } else {
@@ -70,7 +70,7 @@ class HomeBannerItem : FrameLayout {
             }
 
             override fun onPlayError(url: String?, vararg objects: Any?) {
-                Log.d(TAG, "onPlayError");
+                Log.d(TAG, "onPlayError")
                 imageView.visibility = View.VISIBLE
                 videoView.startPlayLogic()
             }

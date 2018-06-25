@@ -62,7 +62,7 @@ class StandardVideoItem : FrameLayout {
         } else {
             Glide.with(context).load(avatar).asBitmap().centerCrop().into(ivAvatarCircle)
         }
-        tv_title.setText(item.data?.title)
+        tv_title.text = item.data?.title
         var tagText = ""
         if (type.equals("feed")) {
             tagText = ""
@@ -76,13 +76,13 @@ class StandardVideoItem : FrameLayout {
             }
         }
         data?.tags?.take(4)?.forEach { tagText += (it.name + " / ") }
-        val timeFromat = durationFormat(data?.duration)
-        tagText += timeFromat
-        tv_tag.setText(tagText)
+        val timeFormat = durationFormat(data?.duration)
+        tagText += timeFormat
+        tv_tag.text = tagText
 
         if (type.equals("feed")) {
-            tv_tag2.setText(data?.category)
-        } else if (type.equals("categorydetail")) {
+            tv_tag2.text = data?.category
+        } else if (type == "categorydetail") {
             data?.date?.let {
                 tv_tag2.text = timePreFormat(it)
             }

@@ -34,7 +34,6 @@ class MainActivity : BaseActivity() {
             when (checkId) {
                 R.id.rb_home -> {
                     beginTransaction.add(R.id.fl_content, HomeFragment(), checkId.toString())
-
                 }
                 R.id.rb_hot -> {
 
@@ -59,8 +58,6 @@ class MainActivity : BaseActivity() {
                 }
             }
         }
-
         beginTransaction.commit()
-
     }
 }

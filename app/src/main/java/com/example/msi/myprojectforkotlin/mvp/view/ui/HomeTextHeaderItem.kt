@@ -13,7 +13,7 @@ import android.widget.TextView
  */
 class HomeTextHeaderItem : FrameLayout {
 
-    val textView by lazy {
+    private val textView by lazy {
         TextView(context)
     }
 
@@ -35,6 +35,6 @@ class HomeTextHeaderItem : FrameLayout {
 
 
     fun setHeaderText(text: String?) {
-        textView.setText(text)
+        textView.text = text
     }
 }

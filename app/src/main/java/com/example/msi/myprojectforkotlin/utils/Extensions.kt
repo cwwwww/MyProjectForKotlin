@@ -27,15 +27,15 @@ fun durationFormat(duration: Long?): String {
     val second = duration % 60
     if (minute <= 9) {
         if (second <= 9) {
-            return "0${minute}' 0${second}''"
+            return "0$minute' 0$second''"
         } else {
-            return "0${minute}' ${second}''"
+            return "0$minute' $second''"
         }
     } else {
         if (second <= 9) {
-            return "${minute}' 0${second}''"
+            return "$minute' 0$second''"
         } else {
-            return "${minute}' ${second}''"
+            return "$minute' $second''"
         }
     }
 }

@@ -33,7 +33,7 @@ class JumpShowTextView : FrameLayout {
             reCreateObject()
             init()
             field = value
-            placeHolder?.setText(value)
+            placeHolder?.text = value
             start()
         }
 
@@ -98,15 +98,15 @@ class JumpShowTextView : FrameLayout {
                             .take(it.length.toLong())
                             .io_main()
                             .subscribe({ i ->
-                                content = content + it[i.toInt()]
-                                realTextView?.setText(content)
+                                content += it[i.toInt()]
+                                realTextView?.text = content
                             }, { e -> e.printStackTrace() }, { isRun = false }
                             )
                 }
 
             }
         } else {
-            realTextView?.setText(text)
+            realTextView?.text = text
         }
     }
 }
